@@ -1,0 +1,254 @@
+/* PLEASE DO NOT CHNAGE THE EXISTING STYLES - JUST ADD ... FOR YOUR VISUALIZATIONS **/
+body,html{
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+  background:rgba(51,102,255,.2);
+  height:100%;
+}
+
+header{
+  text-align: center;
+  color:rgba(51,102,255,.6);
+  padding:10px;
+}
+
+footer{
+padding:0;
+margin:0;
+padding:10px;
+color:rgba(51,102,255,.6);
+text-align:center;
+
+}
+
+#parent-wrapper{
+background:rgba(51,102,255,.2);
+margin:0;
+padding:0;
+width:100vw;
+/* min-width:1500px; */
+overflow: hidden;
+margin-top:20px;
+}
+
+#childOne{
+margin:0;
+margin-left:20%;
+margin-top:20px;
+width:80%;
+position:relative;
+padding:15px;
+transform-origin: center center;
+}
+
+#Ex4_title{
+margin-left:20%;
+color:white;
+}
+
+
+
+.point_two {
+background-color:white;
+width:10px;
+height:10px;
+position:absolute;
+border-radius: 5px;
+}
+
+.point{
+background-color:white;
+width:15px;
+height:15px;
+border-radius: 5px;
+position:absolute;
+}
+
+.point_three {
+  background: #f2ed91 !important;
+  width:20px;
+height:20px;
+position:absolute;
+border-radius: 5px;
+-webkit-animation: grow-move-spin 6s cubic-bezier(0.8,0,0.2,1) infinite;
+animation: grow-move-spin 6s cubic-bezier(0.8,0,0.2,1) infinite;
+}
+
+.point_four{
+  background: rgb(129, 122, 255);
+  width:15px;
+height:15px;
+position:absolute;
+border-radius: 5px;
+-webkit-animation: spin 6s cubic-bezier(0.8,0,0.2,1) infinite;
+animation: spin 6s cubic-bezier(0.8,0,0.2,1) infinite;
+}
+
+.point_five{
+  background: rgb(255, 197, 122);
+  width:15px;
+height:15px;
+position:absolute;
+border-radius: 5px;
+-webkit-animation: boing 4s linear infinite;
+animation: boing 4s linear infinite;
+
+}
+
+.point_six{
+  background: rgb(122, 255, 168);
+  width:20px;
+height:20px;
+position:absolute;
+border-radius: 5px;
+-webkit-animation: grow 6s cubic-bezier(0.8,0,0.2,1) infinite;
+animation: grow 6s cubic-bezier(0.8,0,0.2,1) infinite;
+}
+
+@-webkit-keyframes boing {
+  0% {
+    -webkit-transform: scale(1.5) translateX(5rem);
+    transform: scale(1.5) translateX(5rem);
+  }
+
+  50% {
+    -webkit-transform: scale(1)  translateX(-5rem);
+    transform: scale(1)  translateX(-5rem);
+  }
+
+
+  100% {
+    -webkit-transform: scale(1.5) translateX(5rem);
+    transform: scale(1.5) translateX(5rem);
+  }
+}
+@keyframes boing {
+  0% {
+    -webkit-transform: scale(1.5)  translateX(5rem);
+    transform: scale(1.5)  translateX(5rem);
+  }
+
+  50% {
+    -webkit-transform: scale(1)  translateX(-5rem);
+    transform: scale(1) translateX(-5rem);
+  }
+
+
+  100% {
+    -webkit-transform: scale(1.5)  translateX(5rem);
+    transform: scale(1.5) translateX(5rem);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: scale(1.0) rotate(360deg) translateY(2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translateY(2.1rem);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg) translateY(-2.1rem);
+    transform: scale(0.5) rotate(180deg) translateY(-2.1rem);
+    /* transform: rotate(180deg); */
+
+  }
+  100% {
+   
+    -webkit-transform: scale(1.0) rotate(360deg) translateY(2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translateY(2.1rem);
+     /* transform: rotate(360deg); */
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: scale(1.0) rotate(360deg) translateY(2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translateY(2.1rem);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg) translateY(-2.1rem);
+    transform: scale(0.5) rotate(180deg) translateY(-2.1rem);
+    /* transform: rotate(180deg); */
+  }
+  100% {
+    -webkit-transform: scale(1.0) rotate(360deg) translateY(2.1rem);
+    transform: scale(1.0) rotate(360deg) translateY(2.1rem);
+    /* transform: rotate(360deg); */
+  }
+}
+
+@-webkit-keyframes grow-move-spin {
+  0% {
+    -webkit-transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg) translate(-5rem, -2.1rem);
+    transform: scale(0.5) rotate(180deg) translate(-5rem, -2.1rem);
+
+  }
+  100% {
+    -webkit-transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem);
+  }
+}
+@keyframes grow-move-spin {
+  0% {
+    -webkit-transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem) ;
+    transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotate(180deg) translate(-5rem, -2.1rem);
+    transform: scale(0.5) rotate(180deg) translate(-5rem, -2.1rem);
+  }
+  100% {
+    -webkit-transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem);
+    transform: scale(1.0) rotate(360deg) translate(5rem, 2.1rem);
+  }
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+
+  100% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+}
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+
+  100% {
+    -webkit-transform: scale(5);
+    transform: scale(5);
+  }
+}
+
+
+/* for dropDown*/
+.css-select{
+background: rgba(51,102,255,.6);
+width: 30%;
+margin-left:45px;
+color:white;
+font-size: 14px;
+outline:none;
+
+}

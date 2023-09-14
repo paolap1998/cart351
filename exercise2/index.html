@@ -1,0 +1,109 @@
+<html>
+
+<head>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!--Libraries-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <!--Scripts-->
+  <script src="setup.js"></script>
+
+  <title>Exercise 2</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="../index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Exercises
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../exercise1/index.html">Exercise 1</a>
+        <a href="../exercise2/index.html">Exercise 2</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Semester Project
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../proposal/proposal.html">Proposal</a>
+        <a href="#">Porotype</a>
+        <a href="#">Prototype documentation</a>
+        <a href="#">Final Project</a>
+        <a href="#">Final Project documentation</a>
+      </div>
+    </div>
+    <a href="#">Reflections</a>
+    <div class="dropdown">
+      <button class="dropbtn">Presentation
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Presentation Slides</a>
+        <a href="#">presentation documentation</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h2>How much coffee did I have?</h2>
+      <form id="choose">
+        <div class="all-drop-down">
+
+          <div class="choose-drop first">
+            <h4>Choose a day:</h4>
+            <select id="day" name="WeekDay">
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+            </select>
+          </div>
+
+          <div class="choose-drop sec">
+            <h4>Filter by kind:</h4>
+            <select id="filter" name="kindFilter">
+              <option value="homemade">Homemade</option>
+              <option value="2 homemade, 1 bought">Bought</option>
+              <option value="all">Show All</option>
+          </div>
+
+        </div>
+        
+        <input type="submit" value="Go" id="sub-button">
+      </form>
+      
+    </div>
+  </div>
+
+
+  <div class="row2">
+    <div class="card2">
+      <div id="coffeeCups"></div>
+      <div class="section">
+        <section id="coffee-details">
+
+        </section>
+      </div>
+    
+    </div>
+  </div>
+  <div class="row3">
+    <div class="card3">
+      <a href="PaolaPetitti_Exercise_2.zip" download="PaolaPetitti_Exercise_2">Download code!</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Libraries-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--MY STYLES-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--MY SCRIPTS-->
+    <script src="js/script.js"></script>
+    <script src="js/songList.js"></script>
+    <script src="js/devices.js"></script>
+    <script src="js/tracks.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/currentlyPlaying.js"></script>
+    <script src="js/playSong.js"></script>
+
+
+    <title>Spotify Example</title>
+</head>
+<body onload="onPageLoad()">
+    <!--Top Bar-->
+    <div class="navbar">
+      <a href="../index.html">Home</a>
+        <a href="index.html">Example Start</a>
+        
+      </div>
+
+      <!--div for container authentication will be in-->
+      <div id="authenticationDiv" class="row">
+        <div class="card">
+            <div class="topData permission">
+            <h3>Spotify Permissions</h3>
+
+            <button id="authorizeButton" onclick="requestAuthorization()">Log In</button>
+            </div>
+        </div>
+      </div>
+
+</body>
+</html>

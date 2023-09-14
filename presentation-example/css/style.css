@@ -1,0 +1,249 @@
+/*
+    Where I got the code for the nav bar: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp 
+
+    Where i got the code for the boxes: https://www.w3schools.com/howto/howto_css_blog_layout.asp 
+*/
+
+@font-face {
+    font-family: 'Gotham-Rounded-Light';
+    src: url('../fonts/GothamRoundedLight_21020.ttf');
+}
+
+@font-face {
+    font-family: 'Gotham-Rounded-Medium';
+    src: url('../fonts/GothamRoundedMedium_21022.ttf');
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(45,45,45);
+    font-family: 'Gotham-Rounded-Medium';
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(71, 71, 71);
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  
+  /* background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(71, 71, 71);
+  }
+  
+
+
+ /* CODE FOR THE DIV BOXES (link to what I followed up at the top of the document) */ 
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  body {
+    padding: 20px;
+    background: rgb(18,18,18);
+    font-family: 'Gotham-Rounded-Light';
+    color: #fff;
+  }
+  
+  h1, h2 {
+    padding-left: 5px;
+    
+  }
+
+
+  img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: rgb(45,45,45);
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(71, 71, 71);
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+  }
+
+
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  /* CSS */
+  #authorizeButton, #showArtists, #changeDevice {
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #authorizeButton:hover {
+    box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+    transform: translateY(-2px);
+  }
+  
+  @media (min-width: 768px) {
+    #authorizeButton {
+      padding: 10px 30px;
+    }
+  }
+  
+  #topMusic {
+    justify-content: center;
+    font-family: 'Gotham-Rounded-Light';
+    margin-top: 10px;
+    display: block;
+  }
+
+  #topMusic button {
+    background-color: #13aa52;
+    border: 1px solid green;
+    color: white;
+    font-family: 'Gotham-Rounded-Light';
+    padding: 10px 25px;
+    cursor: pointer;
+    width: 100%;
+    display:block;
+    text-align: center;
+  }
+
+
+.topData {
+    margin: 10px;
+    justify-content: center;
+}
+
+.topMusic:not(:last-child){
+    border-bottom: none;
+}
+
+
+label {
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+    
+}
+
+
+label:before {
+    content: "";
+    height: 31px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    width: 22px;
+    background: rgb(192, 192, 192);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    pointer-events: none;
+    display: block;
+  }
+  label:after {
+    content: " ";
+    position: absolute;
+    right: 15px;
+    top: 46%;
+    margin-top: -3px;
+    z-index: 2;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.9px 4px 0 4px;
+    border-color: rgb(71, 71, 71) transparent transparent transparent;
+    pointer-events: none;
+  }
+  label select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 30px 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    line-height: 36px;
+    height: 36px;
+    background: rgb(192, 192, 192);
+    margin: 0 5px 5px 0;
+    color: #1c1c1c;
+  }
+  
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 30px 0 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    line-height: 36px;
+    height: 36px;
+    background: rgb(192, 192, 192);
+    margin: 0 5px 5px 0;
+    color: #1c1c1c;  
+    cursor: pointer;
+  }
+  
+  .play img {
+    width: 200px;
+  }
+ 
+  #downloadLink a {
+    color: #e0e0e0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  
+
+  #downloadLink a:visited {
+    color: #a2a2a2;
+  }
+
+  #downloadLink a:hover{
+    color: #13aa52;
+  }
+
+  #downloadLink a:active {
+    color: #e0e0e0;
+  }

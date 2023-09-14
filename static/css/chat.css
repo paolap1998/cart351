@@ -1,0 +1,577 @@
+.phone-background{
+    width: 350px;
+    height: 560px;
+    background-color: #091921;
+    z-index: -2;
+    position: absolute;
+    left:40%;
+    bottom: 15%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 15%;
+    left: 40%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.collapsible {
+    background-color:rgb(253, 145, 181);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 350px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid white;
+    border-bottom: none;
+    
+}
+
+.content-redirect {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+
+.chat-bar {
+    position: fixed;
+    width: 350px;
+    bottom: 13%;
+    left: 40%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.chat-title {
+    background-color: rgb(253, 145, 181);
+    color: white;
+    /* cursor: pointer; */
+    padding: 18px;
+    width: 350px;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px 10px 0px 0px;
+    border: 3px solid white;
+    border-bottom: none;
+}
+
+
+.full-chat-block {
+    width: 350px;
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 5;
+}
+
+.outer-container {
+    min-height: 500px;
+    bottom: 0%;
+    position: relative;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+    
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+    
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none;
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+
+/*MODAL STUFF*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content, .modal-content-login {
+    background-color: #fefefe;
+    margin-left: 40rem;
+    margin-top: 8rem;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 15rem;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* CSS */
+#logInButton, #createButton {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#logInButton:hover,
+#logInButton:focus,
+#createButton:hover,
+#createButton:focus {
+  background-color: #F082AC;
+}
+
+#logInButton:disabled, #createButton:disabled {
+    background-color: #d39494;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* CSS */
+#spotifyButton {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#spotifyButton:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+#spotifyButton:hover {
+  background-color: #2c974b;
+}
+
+#spotifyButton:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+#spotifyButton:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+#spotifyButton:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+
+
+
+/*APPLE MUSIC BUTTON*/
+#appleMusicButton {
+    appearance: none;
+    background-color: #ff3333;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  #appleMusicButton:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  #appleMusicButton:hover {
+    background-color: #972c2c;
+  }
+  
+  #appleMusicButton:focus {
+    box-shadow: rgba(164, 46, 46, 0.4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  #appleMusicButton:disabled {
+    background-color: #d39494;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  #appleMusicButton:active {
+    background-color: #8e2929;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+        height: 100%;
+    }
+    .chat-bar-collapsible {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+        height: 100%;
+    }
+}
+.heart-app {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    zoom: 0.70;
+    position: absolute;
+    left:53%;
+    bottom: 71%;
+    background: #fff;
+    border-radius: 15%;
+}
+
+#fa-heart {
+    color: #ff0000;
+    zoom: 9.5;
+    margin-top: 1.2px;
+    margin-left: 1px;
+}
+
+/*clock*/
+.clock-app {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    zoom: 0.70;
+    position: absolute;
+    left: 10%;
+    bottom: 71%;
+    background: #fff;
+    border-radius: 15%;
+}
+
+
+.clock {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    position: absolute;
+    left: 4%;
+    bottom: 4%;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/clock.png);
+    background-size: cover;
+    border: 2px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+                inset 0 -15px 15px rgba(255, 255, 255, .05),
+                0 15px 15px rgba(0, 0, 0, .3),
+                inset 0 15px 15px rgba(0, 0, 0, .3);
+    zoom: 0.9;
+}
+
+.clock:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.clock .hour, 
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+width: 85px;
+height: 85px;
+}
+
+.clock .min, .mn {
+    width: 105px;
+    height: 105px;
+}
+
+.clock .sec, .sc {
+    width: 115px;
+    height: 115px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 45px;
+    background: #ff105e;
+    z-index: -1;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 2.5px;
+    height: 55px;
+    background: rgb(0, 0, 0);
+    z-index: -3;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 0.5px;
+    height: 75px;
+    background: rgb(152, 16, 16);
+    z-index: -2;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.spotify-app {
+    width: 390px;
+    height: 175px;
+    display: flex;
+    zoom: 0.70;
+    position: absolute;
+    left: 10%;
+    bottom: 45%;
+    background: #fff;
+    border-radius: 25px;
+}
+
+#albumImage {
+    border-radius: 15%;
+    zoom: 0.2;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    cursor: pointer;
+}
+
+#trackTitle , #trackArtist {
+    position: absolute;
+    left: 44%;
+}
+
+#trackTitle {
+    bottom: 71%;
+    font-size: 1.4rem
+}
+#trackArtist{
+    bottom: 53%;
+}
+
+.buttons {
+    position: absolute;
+    left: 44%;
+    bottom: 20%;
+    zoom: 1.5;
+    
+}
+.fa-solid {
+    padding-left: 5px;
+    cursor: pointer;
+}

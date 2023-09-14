@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Libraries-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--MY STYLES-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--MY SCRIPTS-->
+    <script src="js/script.js"></script>
+    <script src="js/songList.js"></script>
+    <script src="js/devices.js"></script>
+    <script src="js/tracks.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/currentlyPlaying.js"></script>
+    <script src="js/playSong.js"></script>
+
+
+    <title>Spotify Example</title>
+</head>
+
+<body onload="onPageLoad()">
+    <!--Top Bar-->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Example Start</a>
+      </div>
+
+      <div id="apiCallDiv" class="row">
+        <div class="card">
+            <div class="topData">
+                <label for="playlists" id="playlist-label">
+                    <select id="playlists" >
+                        
+                    </select>
+            </label>
+                <input class="btn" id="showArtists" type="button" onclick="refreshPlaylists()" value="Create Top 20 Playlist">
+            </div>
+
+            <div class="topData">
+                <label id="devices-label">
+                <select id="devices">
+
+                </select>
+            </label>
+                <input class="btn" id="changeDevice" type="button" onclick="transfer()" value="Change Device">
+            </div>
+        </div>
+      </div>
+      
+        <div class="card" id="selection">
+            <div class="topData songs">
+                <h3>Choose a Song</h3>
+                    <select id="tracks">
+
+                    </select>
+            </div>
+            <div class="topData play">
+                <h3> Currently Playing </h3>
+                <div>
+                    <img id="albumImage" src="">
+                    <div id="trackTitle"></div>
+                    <div id="trackArtist"></div>
+                </div>
+                <input class="btn" id="showArtists" type="button" onclick="currentlyPlaying()" value="Refresh">
+            </div>
+        </div>
+        <div class="card" id="playButtons">
+            <div class="topData buttons">
+                <input class="btn" id="showArtists" type="button" onclick="previous()" value="Prev">
+                <input class="btn" id="showArtists" type="button" onclick="play()" value="Play">
+                <input class="btn" id="showArtists" type="button" onclick="pause()" value="Pause">
+                <input class="btn" id="showArtists" type="button" onclick="next()" value="Next">
+            </div>
+        </div>
+        <div class="card" id="downloadLink">
+            <a href="PaolaPetitti_Spotify_Example.zip" download="PaolaPetitti_Spotify_Example" id="downloadLink">Download Code!</a>
+        </div>
+</body>
+</html>

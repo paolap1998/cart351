@@ -1,0 +1,44 @@
+{
+    "days": [
+    {
+        "day": "Tuesday",
+        "amount": 3,
+        "kind": ["homemade", "homemade", "homemade"],
+        "homemade": "homemade",
+        "sugar": "1 tsp of sugar",
+        "creamer": "dash of hazelnut creamer",
+        "homemade_coffee": "images/homemade_latte.png",
+        "bought_coffee": "images/bought_coffee.png"
+    },
+    {
+        "day": "Wednesday",
+        "amount": 3,
+        "kind": ["bought", "homemade", "homemade"],
+        "homemade": "2 homemade, 1 bought",
+        "sugar": "1 tsp of sugar",
+        "creamer": "dash of hazelnut creamer",
+        "homemade_coffee": "images/homemade_latte.png",
+        "bought_coffee": "images/bought_coffee.png"
+    },
+    {
+        "day": "Thursday",
+        "amount": 3,
+        "kind": ["homemade", "homemade", "homemade"],
+        "homemade": "homemade",
+        "sugar": "1 tsp of sugar",
+        "creamer": "dash of hazelnut creamer",
+        "homemade_coffee": "images/homemade_latte.png",
+        "bought_coffee": "images/bought_coffee.png"
+    },
+    {
+        "day": "Friday",
+        "amount": 3,
+        "kind": ["bought", "homemade", "homemade"],
+        "homemade": "2 homemade, 1 bought",
+        "sugar": "1 tsp of sugar",
+        "creamer": "dash of hazelnut creamer",
+        "homemade_coffee": "images/homemade_latte.png",
+        "bought_coffee": "images/bought_coffee.png"
+    }
+]
+}

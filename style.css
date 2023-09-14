@@ -1,0 +1,80 @@
+/*
+A few semesters ago I made a video project which had me recreate a bunch of Nintendo consoles in Adobe illustrator and 
+while brainstorming ideas for what I should do for this personal website I stumbled upon that project again and got the idea
+to turn a gameboy into a kind of directory for all the class content. I looked online to see if there was anything similar to
+my idea and I did find one person who made a gameboy entirely in CSS however I chose to do mine with a mix of HTML, CSS and P5.js.
+The only thing I took from that CSS gameboy I found was the audio file they provided for the project, all of which is linked below.
+
+Inspiration for this webpage: https://github.com/baumannzone/gameboy-css 
+Link to where I got the gameboy sound: https://github.com/baumannzone/gameboy-css/blob/master/docs/sound/gameboy-sound.mp3 
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  
+}
+
+/* Click here animation start*/
+#clickHere {
+  animation: 3s linear infinite alternate;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+/*Simple styling for the class name*/
+#className {
+  text-align: center;
+  font-size: 3vh;
+}
+
+/* Adding the horizontal scrollbar to the screen */
+#classContentBox {
+  border: none;
+  padding: 4px;
+  font: 14px sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* Removing the bullet points from the title names */
+#linkTitle  {
+  list-style: none;
+}
+
+/* Making sure the bullets are still there for everything else */
+#classContentBox ul {
+  list-style: disc;
+}
+
+/* Changing the link colors to match the rest of the text */
+a:link, a:visited {
+  color: black;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track{
+  width: 2px; 
+  border: 1px dashed green;
+}
+
+::-webkit-scrollbar-thumb {
+  background: green;
+}

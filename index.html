@@ -1,0 +1,75 @@
+<!--
+A few semesters ago I made a video project which had me recreate a bunch of Nintendo consoles in Adobe illustrator and 
+while brainstorming ideas for what I should do for this personal website I stumbled upon that project again and got the idea
+to turn a gameboy into a kind of directory for all the class content. I looked online to see if there was anything similar to
+my idea and I did find one person who made a gameboy entirely in CSS however I chose to do mine with a mix of HTML, CSS and P5.js.
+The only thing I took from that CSS gameboy I found was the audio file they provided for the project, all of which is linked below.
+
+Inspiration for this webpage: https://github.com/baumannzone/gameboy-css 
+Link to where I got the gameboy sound: https://github.com/baumannzone/gameboy-css/blob/master/docs/sound/gameboy-sound.mp3 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Paola CART351</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+    
+
+    <!--P5.js-->
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <!--My Scripts-->
+    <script src="sketch.js"></script>
+  </head>
+
+  <body>
+    <div id="className">
+      <p>CART351</p>
+    </div>
+    <div id="clickHere">
+      <p>&darr; Click Here!</p>
+    </div>
+    <div id="classContentBox">
+      <p>Below you will find links to all of my class work throughout the semester</p>
+      <li id="linkTitle"> Exercises:::
+        <ul>
+          <li><a href="exercise1/index.html">exercise 1 </a></li>
+          <li><a href="exercise2/index.html">exercise 2 </a></li>
+          <li><a href="exercise3/index.php">exercise 3 </a></li>
+          <li><a href="exercise4/public_html/Ex4_Visualization/niceView.php">exercise 4</a></li>
+        </ul>
+    </li>
+    <li id="linkTitle">Semester Project (UNTITLED)
+      <ul>
+        <li><a href="proposal/proposal.html">proposal </a> </li>
+        <li><a href="prototype/index.html">Prototype</a></li>
+         <li><a href="static/index.php">final project</a></li>
+         <li><a href="static/index.php">final project documentation </a></li>
+      </ul>
+    </li>
+    <li id="linkTitle"> Reflections
+      <ul>
+        <li><a href="reflections/index.html">reflections</a></li>
+      </ul>
+  </li>
+  <li id="linkTitle"> Presentation
+    <ul>
+      <li><a href="#">presentation slides</a></li>
+       <li><a href="presentation-example/index.html">Presentation Example</a></li>
+    </ul>
+</li>
+    </div>
+  </body>
+</html>

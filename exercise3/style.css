@@ -1,0 +1,283 @@
+/*
+    Where I got the code for the nav bar: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp 
+
+    Where i got the code for the boxes: https://www.w3schools.com/howto/howto_css_blog_layout.asp 
+*/
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(252, 114, 114);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ae7a7a;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+  }
+  
+  /* background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 79, 135);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links in the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: rgb(255, 191, 191);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+ /* CODE FOR THE DIV BOXES (link to what I followed up at the top of the document) */ 
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    padding: 20px;
+    background: #ffc9c9;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2 {
+    padding-left: 5px;
+    text-align: center;
+  }
+
+  .storyFrames {
+    background-color: pink;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    
+  }
+
+  img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: rgb(255, 255, 255);
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 10px 10px #ae7a7a;
+  }
+  
+  .card h2 {
+    padding-left: 0px;
+  }
+
+  select {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(252, 114, 114);
+    box-shadow: 3px 3px #ae7a7a;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+
+
+.all-drop-down {
+    display:inline-flex;
+}
+
+.coffeeCups, .section {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.section {
+    margin-left: 25px;
+}
+
+.card2 {
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    background-color: rgb(255, 191, 191);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px #ae7a7a;
+    color: black;
+    padding: 13px 32px;
+    text-decoration: none;
+    margin: 0px 25px;
+    cursor: pointer;
+}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+
+ /*BUTTON CSS
+ where I got it: https://getcssscan.com/css-buttons-examples
+ */
+
+.button-55, .submit-55 {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: block;
+  font-family: Neucha, sans-serif;
+  font-size: 2rem;
+  line-height: 23px;
+  outline: none;
+  padding: 1rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.button-55:hover, .submit-55:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus, .submit-55:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+
+
+input {
+    display: block;
+    width: 100%;
+    font-size: 14pt;
+    line-height: 28pt;
+    font-family: "Fjalla One";
+    margin-bottom: 28pt;
+    border: none;
+    border-bottom: 5px solid black;
+    background: #ffffff;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: black;
+  }
+  
+  input:focus {
+    border-bottom: 5px solid #ffa580;
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+    line-height: 28pt;
+    padding: 0 20px;
+    background: #ffa580;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px 1px #95a4ff, 3px 3px 1px 2px black;
+  }
+  button:hover {
+    background: black;
+    color: white;
+    border: 1px solid black;
+  }
+  
+  ::selection {
+    background: #ffc8ff;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    border-bottom: 5px solid #95a4ff;
+    -webkit-text-fill-color: #2A293E;
+    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+#qTwo, #qThree, #qFour, #center {
+    display: none;
+}
